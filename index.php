@@ -73,33 +73,44 @@
                     </div>
                 </div>
             </div>
-            <?php
-                $html = file_get_contents('https://www.yelp.com/biz/los-primos-restaurant-goshen?sort_by=rating_desc');
-                $review_doc = new DOMDocument();
-                libxml_use_internal_errors(TRUE);
-                if(!empty($html)){
-                    $review_doc->loadHTML($html);
-                    libxml_clear_errors();
-                    $review_xpath = new DOMXPath($review_doc);
-                    $review_row = $review_xpath->query('//li[@class="user-name"]');
-                    if($review_row->length > 0){
-                        for($i = 1; $i <= 3; $i++){
-                            echo str_replace(array("\r", "\n"), '', $review_row[$i]->nodeValue);
-                            echo"\n";
-                        }
-                    }
-                    $review_row = $review_xpath->query('//p[@lang="en"]');
-                    if($review_row->length > 0){
-                        for($i = 1; $i <= 3; $i++){
-                            echo str_replace(array("\r", "\n"), '', $review_row[$i]->nodeValue);
-                            echo"\n";
-                        }
-                    }
-               
-                     }
-            ?>
             <div style="height:200px;"></div>
+	    <h1 id='rh'>Customer Reviews</h1>
+	    <div class="reviews">
+	            <?php
+	                $html = file_get_contents('https://www.yelp.com/biz/los-primos-restaurant-goshen?sort_by=rating_desc');
+	                $review_doc = new DOMDocument();
+	                libxml_use_internal_errors(TRUE);
+	                if(!empty($html)){
+	                    $review_doc->loadHTML($html);
+	                    libxml_clear_errors();
+	                    $review_xpath = new DOMXPath($review_doc);
+	                    $review_row = $review_xpath->query('//li[@class="user-name"]');
+	                    if($review_row->length > 0){
+	                        for($i = 1; $i <= 3; $i++){
+				    ${'title'.$i} = str_replace(array("\r", "\n"), '', $review_row[$i]->nodeValue);
+	                            echo"\n";
+	                        }
+	                    }
+	                    $review_row = $review_xpath->query('//p[@lang="en"]');
+	                    if($review_row->length > 0){
+	                        for($i = 1; $i <= 3; $i++){
+	                            ${'review'.$i}= str_replace(array("\r", "\n"), '', $review_row[$i]->nodeValue);
+	                            echo"\n";
+	                        }
+	                    }
+	               
+	                     }
+			for($i = 1; $i <= 3; $i++){
+				echo '<div class="review">';
+				echo '<h2>'.${'title'.$i}.'</h2>';
+				echo '<hr/><br/>';
+				echo '<p>'.${'review'.$i}.'</p>';
+				echo '</div>';
+			}
+	            ?>
+	        </div>
         </div>
+
         <div style="height:2000px;"></div>
         <div class="footer">
             <img src="./images/chili.svg"/>

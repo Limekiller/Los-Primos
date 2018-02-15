@@ -194,6 +194,33 @@ p {
     margin-top:-15px;
 }
 
+/*Reviews*/
+#rh {
+	font-size:75px;
+	color:#00AF5F;
+	text-shadow:2px 2px #000;
+	text-align:center;
+	padding-bottom:50px;
+}
+.reviews {
+	display:flex;
+	padding-left:50px;
+	padding-right:50px;
+}
+.reviews p {
+	line-height:44px;
+	font-size:20px;
+}
+.review {
+	padding:20px;
+}
+.review h2 {
+	text-align:center;
+	font-size:35px;	
+	color:#2645a5;
+	margin-bottom:20px;
+}
+
 
 
 /*MOBILE*/
@@ -210,7 +237,8 @@ p {
     }
 
 
-    /*FEATURE*/
+    /*INDEX*/
+    /*feature*/
     .feature {
         padding-left:20px;
     }
@@ -241,6 +269,11 @@ p {
     }
     .plate_selected {
         left:-27px;
+    }
+    
+    /*Reviews*/
+    .reviews {
+	flex-direction:column;
     }
 }
 
