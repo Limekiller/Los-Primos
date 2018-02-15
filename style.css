@@ -1,0 +1,255 @@
+/*SITE WIDE*/
+@font-face {
+    font-family: Renner;
+    font-weight: 900;
+    src:url("./fonts/renner-black.otf") format("opentype");
+}
+* {
+    margin:0;
+    padding:0;
+    font-family:Helvetica;
+}
+h1, h2, h3{
+    font-family: "Renner";
+}
+h4, h5 {
+    font-family: Helvetica;
+}
+html, body {
+    height:100%;
+}
+p {
+    line-height:30px;
+}
+
+/*Container Stuff*/
+.wrapper {
+    min-height:100%;
+    margin-bottom:-150px;
+}
+
+
+/*Header Stuff*/
+.header {
+    display:flex;
+    justify-content:space-between;
+    transition:all 0.4s ease;
+    padding:20px;
+    height:75px;
+    color:#2645a5;
+    background-color:white;
+    padding-left:200px;
+    box-shadow:2px -3px 20px #c9c9c9;
+    position:fixed;
+    width:100%;
+    z-index:1;
+}
+.logo {
+    display:flex;
+    font-size:25px;
+    flex-direction:row;
+}
+.logo h5 {
+    line-height:8px;
+    letter-spacing:13px;
+}
+.logo img{
+    padding-right:5px;
+    z-index:2;
+    height:55px;
+}
+.logo div{
+    transition:all 0.1s ease;
+}
+.menu {
+    transition:all 0.4s ease;
+    position:relative;
+    right:350px;
+}
+.header ul {
+    font-weight:bold;
+    list-style-type: none;
+    display:flex;
+}
+.header li {
+    padding:20px;
+}
+.blocker {
+    position:absolute;
+    height:100%;
+    width:750px;
+    background-color:white;
+    margin-top:-20px;
+    margin-left:-674px;
+    z-index:1;
+}
+.shrink {
+    height:61px;
+    padding: 5px;
+    padding-left:20px;
+}
+.shrink_logo {
+    opacity:0;
+    margin-left:-200px;
+}
+.shrink_menu {
+    right:35px;
+}
+.shrink_block {
+    height:86px;
+}
+
+/*Footer Stuff*/
+.footer {
+    background-color:#2a2a2a;
+    height:150px;
+    box-shadow:2px -3px 20px #c9c9c9;
+    overflow:hidden;
+}
+.footer img {
+    height: 681px;
+    margin-top: -397px;
+    filter:grayscale(100%) brightness(249%);
+}
+
+
+/*INDEX PAGE*/
+/*Feature*/
+.feature {
+    position:relative;
+    z-index:0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(./images/wood.jpg) repeat 0 0;
+    padding-top:150px;
+    padding-left:200px;
+    height: calc(1790px - 100vw);
+    overflow:hidden;
+    min-height:90vh
+}
+.plates{
+    position:relative;
+    left:-1385px;
+}
+.plate{
+    height:1018px;
+    margin-top:-200px;
+    position:absolute;
+    animation: rotation 60s infinite linear;
+    transition:all 0.5s ease;
+    transition-delay:0s, 1s;
+    transition-property:left, opacity;
+    opacity:0;
+    left:-950px;
+}
+.plate_selected {
+    opacity:1;
+    transition:all 0.5s ease;
+    transition-delay:0.5s, 0s;
+    transition-property:left, opacity;
+    left:0;
+}
+.head {
+    font-size:53px;
+    margin-left:38%;
+}
+.feature_container {
+    display:flex;
+    flex-direction:row-reverse;
+}
+.feature_container p {
+    margin:50px;
+}
+.feature_cascade {
+    display:flex;
+    flex-direction:column;
+    width:775px;
+    margin-left:-121px;
+    flex-shrink:0;
+    position:relative;
+    left:-13%;
+}
+.feature_cascade h1 {
+    margin-left:50px;
+    margin-bottom:-41px;
+    color:#2645a5;
+}
+.featured_item{
+    display:none;
+}
+.featured_item_selected {
+    display:initial;
+}
+.img_selector {
+    display:flex;
+    justify-content:space-around;
+}
+.img_select {
+    width:25px;
+    height:25px;
+    border-radius:50px;
+    background-color:#2645a5;
+    transition:all 0.4s ease;
+}
+.img_select_on {
+    background-color:#00AF5F;
+    margin-top:-15px;
+}
+
+
+
+/*MOBILE*/
+@media all and (max-width: 900px){
+    /*HEADER*/
+    .menu li {
+        padding:1px;
+    }
+    .shrink_menu {
+        right:36px;
+    }
+    .menu ul {
+        flex-direction:column;
+    }
+
+
+    /*FEATURE*/
+    .feature {
+        padding-left:20px;
+    }
+    .feature h1 {
+        margin-left:0px;
+    }
+    .feature_container {
+        flex-direction:column;
+    }
+    .feature_container p {
+        margin: 0;
+        margin-top:50px;
+        margin-bottom:50px;
+    }
+    .feature_cascade {
+        width:auto;
+        margin-left:0px;
+        left:auto;
+    }
+    .plates{
+        left:0;
+        margin-top:5vw;
+    }
+    .plate {
+        margin-top:0px;
+        height:auto;
+        width:100vw;
+    }
+    .plate_selected {
+        left:-27px;
+    }
+}
+
+/*ANIMATIONS*/
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
