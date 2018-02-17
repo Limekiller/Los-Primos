@@ -9,3 +9,14 @@ $(function() {                       //run when the DOM is ready
               $(this).addClass("img_select_on");      //add the class to the clicked element
                 });
 });
+function initMap() {
+        var uluru = {lat: 41.583537, lng: -85.835729};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+ 	  position: uluru,
+          map: map
+        });
+}

@@ -6,6 +6,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="./scripts/header.js"></script>
         <script src="./scripts/index.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoKMv8WQN8ytcp_J1GJPCKaxTtrtH71jg&callback=initMap" type="text/javascript"></script>
         <title>
             Los Primos Mexican Grill
         </title>
@@ -86,21 +87,21 @@
 	                    $review_xpath = new DOMXPath($review_doc);
 	                    $review_row = $review_xpath->query('//li[@class="user-name"]');
 	                    if($review_row->length > 0){
-	                        for($i = 1; $i <= 3; $i++){
+	                        for($i = 0; $i < 6; $i++){
 				    ${'title'.$i} = str_replace(array("\r", "\n"), '', $review_row[$i]->nodeValue);
 	                            echo"\n";
 	                        }
 	                    }
 	                    $review_row = $review_xpath->query('//p[@lang="en"]');
 	                    if($review_row->length > 0){
-	                        for($i = 1; $i <= 3; $i++){
+	                        for($i = 0; $i < 6; $i++){
 	                            ${'review'.$i}= str_replace(array("\r", "\n"), '', $review_row[$i]->nodeValue);
 	                            echo"\n";
 	                        }
 	                    }
 	               
 	                     }
-			for($i = 1; $i <= 3; $i++){
+			for($i = 0; $i < 6; $i++){
 				echo '<div class="review">';
 				echo '<h2>'.${'title'.$i}.'</h2>';
 				echo '<hr/><br/>';
@@ -109,9 +110,20 @@
 			}
 	            ?>
 	        </div>
+		<a target="_blank" class="button"href="https://www.yelp.com/biz/los-primos-restaurant-goshen?sort_by=rating_desc">
+			<div><h2>See more reviews</h2></div>
+		</a>
+		<div class="map">
+			<div class="map_text">
+				<h1>Locate Us</h1>
+				<br />
+                            	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+			</div>
+			<div id="map"></div>
+		</div>
         </div>
 
-        <div style="height:2000px;"></div>
+        <div style="margin-top:500px;height:2000px;"></div>
         <div class="footer">
             <img src="./images/chili.svg"/>
         </div>
