@@ -20,16 +20,14 @@ $(function(){
                return window.pageYOffset || document.documentElement.scrollTop;
                    }
 });
-(function($) {
+var checkWindow = function() {
     var $window = $(window);
-
-    $window.resize(function resize() {
         if ($window.width() < 900){
                 $('.header').addClass('shrink');
                 $('.logo div').addClass('shrink_logo');
                 $('.menu').addClass('shrink_menu');
                 $('.blocker').addClass('shrink_block');
         }
+};
 
-    }).trigger('resize');
-})(jQuery);
+var timer = setInterval(checkWindow, 100);

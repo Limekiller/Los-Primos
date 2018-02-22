@@ -123,9 +123,16 @@
 		</div>
         </div>
 
-        <div style="margin-top:500px;height:2000px;"></div>
+        <div style="height:150px;"></div>
         <div class="footer">
-            <img src="./images/chili.svg"/>
+                <div class="flogo">
+                    <img src="./images/chili.svg"/>
+                    <div style="width:100%;">
+                        <h1>LOS PRIMOS</h1>
+                        <h5>MEXICAN GRILL</h5>
+                    </div>
+                </div>
+		<div class="finfo">Created by Bryce Yoder, 2018.</div>
         </div>
     </body>
 </html>
