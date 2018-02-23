@@ -9,6 +9,17 @@
     padding:0;
     font-family:Helvetica;
 }
+a {
+    	color:#2645a5;
+	text-decoration:none;
+	transition:all 0.4s ease;
+}
+a:hover {
+	color:#00AF5F;
+}
+h1 {
+    font-size:53px;
+}
 h1, h2, h3{
     font-family: "Renner";
 }
@@ -43,6 +54,9 @@ p {
     position:fixed;
     width:100%;
     z-index:1;
+}
+a .logo, a .logo:hover {
+    	color:#2645a5;
 }
 .logo {
     white-space:nowrap;
@@ -142,6 +156,10 @@ p {
     position:relative;
     z-index:0;
     background: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), url(./images/wood.jpg) repeat 0 0;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;    
     padding-top:150px;
     padding-left:200px;
     overflow:hidden;
@@ -262,6 +280,7 @@ p {
 }
 .button:hover {
 	background-color:#00AF5F;
+	color:white;
 	box-shadow:2px 2px 0px #000;
 }
 
@@ -299,6 +318,71 @@ p {
 	-webkit-mask-repeat: no-repeat;
 }
 
+
+/*MENU PAGE*/
+.m_wrapper {
+    min-height:100%;
+    margin-bottom:-150px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%), url(./images/menu.jpg) repeat 0 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url(./images/wood.jpg) repeat 0 0;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;    
+}
+.r_menu {
+	text-align:center;
+	padding:10vw;
+	padding-bottom:50px;
+	padding-top:150px;
+}
+.r_menu h1 {
+	font-size:50px;
+	color:#00AF5F;
+	text-shadow:2px 2px #000;
+}
+.m_chooser {
+	margin-top:100px;
+	display:flex;
+}
+.m_buttons {
+	float:left;
+}
+.m_buttons_uns{
+	transition:all 0.4s ease;
+	cursor:pointer;
+	font-size:30px;	
+	color:#2645a5;
+	text-align:right;
+}
+.fmenu {
+	margin-left:50px;
+	display:none;
+	width:60%;
+	padding:25px;
+	text-align:left;
+	background-color:#fff;
+}
+.fmenu h2 {
+	color:#2645a5;
+	font-size:35px;
+	margin-bottom:-10px;
+}
+.fmenu h3 {
+	color:#000;
+	font-size:25px;
+	margin-bottom:-5px;
+}
+.fmenu p {
+	line-hieght:30px;
+	margin-bottom:30px;
+}
+.menu_select {
+	display:block;
+}
+.m_buttons_select {
+    color:#00AF5F;
+}
 
 
 
@@ -394,6 +478,22 @@ p {
 	margin-left:0px;
 	-webkit-mask-image:none;
  	mask-image:none; 
+   }
+
+
+   /*MENU*/
+   .m_chooser {
+	flex-direction:column;
+   }
+   .fmenu {
+	margin-top:50px;
+	margin-left:-10px;
+	width:100%;
+	padding:10px;
+   }
+   .m_buttons_uns {
+	margin-bottom:25px;
+	text-align:left;
    }
 }
 

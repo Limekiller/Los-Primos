@@ -14,6 +14,7 @@
     <body>
         <div class="wrapper">
             <div class="header">
+		<a href="/">
                 <div class="logo">
                     <section class="blocker"></section>
                     <img src="./images/chili.svg"/>
@@ -22,9 +23,10 @@
                         <h5>MEXICAN GRILL</h5>
                     </div>
                 </div>
+		</a>
                 <nav class="menu">
                     <ul>
-                        <li>Menu</li>
+                        <li><a href="./menu.php">Menu</a></li>
                         <li>About</li>
                         <li>Contact</li>
                     </ul>
@@ -34,11 +36,11 @@
                 <div class="feature_container">
                     <div class="feature_cascade">
                         <h1 class="head" style="text-shadow:2px 2px #000; color:#00AF5F;">Unparalleled authentic Mexican cuisine, right here in Goshen.</h1>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p>Looking for authentic, delicioius Mexican food in Goshen? Los Primos has the best there is. Our two locations provide different dining experiences for any mood: dine in at our cozy sit-down family restaurant at 122 East Clinton Street, or grab your food faster at our Chipotle-style 124 West Jefferson Street location! No matter which you choose, you'll experience only the best ingredients prepared perfectly just for you.</p>
                         <div>
                             <div id="fi1" class="featured_item featured_item_selected">
-                            <h1>Featured Item 1</h1>
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            <h1>Cochinita Pibil</h1>
+                            <p>Slow-roasted pork marinated in citrus and wrapped in a banana leaf, served with habaneros, refried black beans, rice, and corn tortillas. This delicious, traditional Mexican dish will leave any hunger satisfied.</p>
                             </div>
                             <div id="fi2" class="featured_item">
                             <h1>Featured Item 2</h1>
@@ -117,7 +119,9 @@
 			<div class="map_text">
 				<h1>Locate Us</h1>
 				<br />
-                            	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            	<b>Los Primos Restaurant & Catering</b> <br /> 122 E Clinton St <br /> Goshen, IN 46528
+				<br /> (574) 533-5326 <br /><br /><hr /><br /> <b>Los Primos Mexican Grill</b> 
+				<br /> 124 W Jefferson St <br /> Goshen, IN 46528 <br /> (574) 971-5223
 			</div>
 			<div id="map"></div>
 		</div>
