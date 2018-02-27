@@ -38,6 +38,19 @@ p {
     min-height:100%;
     margin-bottom:-150px;
 }
+.top_section {
+	padding-top:200px;
+}
+.top_section h1 {
+	text-align:center;
+	color:#00AF5F;
+	text-shadow:2px 2px #000;
+	font-size:75px;
+}
+.top_section p {
+	width:650px;
+	margin:0 auto;
+}
 
 
 /*Header Stuff*/
@@ -323,7 +336,6 @@ a .logo, a .logo:hover {
 .m_wrapper {
     min-height:100%;
     margin-bottom:-150px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.9) 100%), url(./images/menu.jpg) repeat 0 0;
     background: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url(./images/wood.jpg) repeat 0 0;
     background-attachment:fixed;
     background-repeat: no-repeat;
@@ -337,7 +349,7 @@ a .logo, a .logo:hover {
 	padding-top:150px;
 }
 .r_menu h1 {
-	font-size:50px;
+	font-size:75px;
 	color:#00AF5F;
 	text-shadow:2px 2px #000;
 }
@@ -354,6 +366,7 @@ a .logo, a .logo:hover {
 	font-size:30px;	
 	color:#2645a5;
 	text-align:right;
+	margin-bottom:5px;
 }
 .fmenu {
 	margin-left:50px;
@@ -366,6 +379,7 @@ a .logo, a .logo:hover {
 .fmenu h2 {
 	color:#2645a5;
 	font-size:35px;
+	margin-top:50px;
 	margin-bottom:-10px;
 }
 .fmenu h3 {
@@ -383,6 +397,63 @@ a .logo, a .logo:hover {
 .m_buttons_select {
     color:#00AF5F;
 }
+
+
+/*ABOUT PAGE*/
+.location_selector {
+	display:flex;
+	margin-top:100px;
+	background-color:black;
+	height:75vh;
+}
+.loc_cover {
+	background-color:rgba(0,0,0,0);
+	transition:all 0.4s ease;
+	width:100%;
+	height:100%;	
+}
+.location {
+	overflow:hidden;
+	color:rgba(0,0,0,0);;
+	height:100%;
+	width:50%;
+	transition: all 0.5s ease;
+}
+.location p {
+	width:650px;
+}
+.location_selector:hover > .location {
+	width:0%;	
+}
+.location_selector:hover > .location:hover {
+	color:white;
+	width:100%;	
+}
+.location_selector:hover > .location:hover .loc_cover {
+	background-color:rgba(0,0,0,0.5);
+	padding:20px;
+}
+#loc1 {
+	background:url("./images/lp1.PNG");
+	background-repeat:no-repeat;
+	background-size:100vw;
+	background-position-y:60%;
+}
+#loc2 {
+	background:url("./images/lp2.PNG");
+	background-repeat:no-repeat;
+	background-size:100vw;
+	background-position-y:60%;
+}
+#loc2 .loc_cover h1, #loc2 .loc_cover p{
+	margin-right:40px;
+	text-align:right;
+}
+#loc2 .loc_cover p {
+	float:right;
+}
+
+
 
 
 
@@ -410,6 +481,7 @@ a .logo, a .logo:hover {
     .flogo {
 	top:0%;
 	font-size:20px;
+	margin-top:35px;
     }
     .finfo {
 	top:0%;

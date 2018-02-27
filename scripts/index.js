@@ -12,8 +12,8 @@ $(function() {                       //run when the DOM is ready
 function initMap() {
         var uluru = {lat: 41.583537, lng: -85.835729};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 19,
-          center: uluru,
+          zoom: 16,
+          center: {lat: 41.586629, lng: -85.833451},
 	  styles: [
   {
     "elementType": "geometry",
@@ -230,8 +230,17 @@ function initMap() {
   }
 ]
         });
-        var marker = new google.maps.Marker({
- 	  position: uluru,
-          map: map
-        });
+        var markers = [
+	  ['Los Primos Restaurant & Catering', 41.587822, -85.833219],
+ 	  ['Los Primos Mexican Grill', uluru]
+	];
+	var bounds = new google.maps.LatLngBounds();
+	
+	for(i=0; i < markers.length; i++){
+		marker = new google.maps.Marker({
+			position: new google.maps.LatLng(markers[i][1], markers[i][2]),
+			map: map
+		});
+	}
+	
 }

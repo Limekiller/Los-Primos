@@ -27,7 +27,7 @@
                 <nav class="menu">
                     <ul>
                         <li><a href="./menu.php">Menu</a></li>
-                        <li>About</li>
+                        <li><a href="./about.html">About</a></li>
                         <li>Contact</li>
                     </ul>
                 </nav>
